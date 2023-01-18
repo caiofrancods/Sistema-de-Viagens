@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.cont{
+  display: grid;
+  grid-template-areas: "cabecalho"
+                       "corpo";
+  grid-gap: 5px;
+}
+.cabecalho{
+  grid-area: cabecalho;
+  padding: 15px;
+  background-color: #114025;
+
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.logo{
+  height: 50px;
+}
+.corpo{
+  grid-area: corpo;
+  padding: 30px;
+  padding-left: 70px;
+  padding-right: 70px;
+  background-color: white;
+}
+.login{
+  padding-left: 250px;
+  padding-right: 250px;
+}
+.icon{
+  width: 25px;
+  height: 25px;
+}
+.buttonicon{
+  font-size:20px;
+  color:white;
+}
+.check{
+  width: 150px;
+  height: 150px;
+}
+.fim{
+  flex-direction: column;
+}
