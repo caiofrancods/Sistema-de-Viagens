@@ -3,6 +3,10 @@
 body{
   font-family: 'Poppins', sans-serif;
 }
+a{
+  text-decoration: none;
+  font-color: white;
+}
 .cont{
   display: grid;
   grid-template-areas: "cabecalho"
@@ -46,4 +50,7 @@ body{
 }
 .fim{
   flex-direction: column;
+}
+.idade{
+  display: none;
 }

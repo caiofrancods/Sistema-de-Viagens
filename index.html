@@ -17,18 +17,22 @@
     <div class="cabecalho">
       <div>
         <img src="imagens/logo_aviao.png" class="logo">
-        <img src="imagens/logo_nome.jpg" class="logo">
+        <a href="index.html"><img src="imagens/logo_nome.jpg" class="logo"></a>
       </div>
-      <button type="button" class="btn btn-primary btn-sm">Área do Cliente</button>
+      <a href="area.html"><button type="button" class="btn btn-primary btn-sm">Área do Cliente</button></a>
     </div>
     <div class="corpo">
-      <!--Colocar Carrosel de Imagens Aqui--> 
-      <div class="formulario">
+      <!--Colocar Carrosel de Imagens Aqui-->
+      <div class="row d.flex justify-content-center align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg " viewBox="0 0 512 512" class="check"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M453.1 32h-312c-38.9 0-76.2 31.2-83.3 69.7L1.2 410.3C-5.9 448.8 19.9 480 58.9 480h312c38.9 0 76.2-31.2 83.3-69.7l56.7-308.5c7-38.6-18.8-69.8-57.8-69.8zm-58.2 347.3l-32 13.5-115.4-110c-14.7 10-29.2 19.5-41.7 27.1l22.1 64.2-17.9 12.7-40.6-61-52.4-48.1 15.7-15.4 58 31.1c9.3-10.5 20.8-22.6 32.8-34.9L203 228.9l-68.8-99.8 18.8-28.9 8.9-4.8L265 207.8l4.9 4.5c19.4-18.8 33.8-32.4 33.8-32.4 7.7-6.5 21.5-2.9 30.7 7.9 9 10.5 10.6 24.7 2.7 31.3-1.8 1.3-15.5 11.4-35.3 25.6l4.5 7.3 94.9 119.4-6.3 7.9z"/></svg>
+        <h1 class="ml-4">Arca Airlines</h1>
+      </div>     
+      <div class="formulario mt-4">
         <form>
           <div class="form-group row">
             <div class="ml-3">
-              <label for="regime">Viagem</label>
-              <select class="custom-select" id="regime" name="opc1">
+              <label for="opcao_viagem">Viagem</label>
+              <select class="custom-select" id="opcao_viagem" name="opcao_viagem" onchange="apenasida()">
                 <option selected value="">Selecione uma opção</option>
                 <option value="idavolta">Ida e Volta</option>
                 <option value="ida">Apenas Ida</option>
@@ -59,15 +63,19 @@
               </select>
             </div>
             <div class="ml-3">
-              <label for="regime">Crianças</label>
-              <select class="custom-select" id="regime" name="opc1">
+              <label for="criancas">Crianças</label>
+              <select class="custom-select" id="criancas" name="criancas" onchange="child()">
                 <option selected value="">Selecione a quantidade</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select>
+            </div>      
+            <div  class="form-group row idade d-flex wrap ml-3" id="idade_child">
+            
             </div>
           </div>
+          
           <div class="form-group row">
             <div class="input-field col s12">
               <label for="">Cidade de Origem</label><br>
@@ -81,9 +89,9 @@
               <label class="" for="">Data de ida</label>
               <input type="date" class="form-control mt-4" id="autocomplete-input" name="" value="" required>
             </div>
-            <div class="input-field col s12">
-              <label class="" for="">Data de volta</label>
-              <input type="date" class="form-control mt-4" id="autocomplete-input" name="" value="" required>
+            <div class="input-field col s12" id="div_volta">
+              <label class="" for="data_volta">Data de volta</label>
+              <input type="date" class="form-control mt-4" id="data_volta" name="data_volta" value="" required>
             </div>
           </div>
           <div class="row d-flex justify-content-end">
@@ -93,9 +101,11 @@
       </div>
     </div>
   </div>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="onchange.js"></script>
 </body>
 
 </html>
