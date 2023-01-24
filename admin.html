@@ -11,49 +11,50 @@
   <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body onload="verif_login(); autorizacoes();mostrar_funcionario()">
   <div class="cont">
     <div class="cabecalho">
       <div>
         <img src="imagens/logo_aviao.png" class="logo">
         <a href="index.html"><img src="imagens/logo_nome.jpg" class="logo"></a>
       </div>
+      <button type="button" class="btn btn-primary btn-sm btn-danger" onclick="sair()">Sair</button>
     </div>
     <div class="corpo">
       <div class="mt-4 d-flex justify-content-center">
-        <a href="cadas_func.html"><button type="button" class="btn btn-primary btn-sm">Cadastrar Funcionário</button></a>
-        <a href="cadas_pass.html"><button type="button" class="btn btn-primary btn-sm ml-4">Cadastrar Passagem</button></a>
-        <a href="checkin.html"><button type="button" class="btn btn-primary btn-sm ml-4">Abrir Balcão de Check-in</button></a>
-        <a href="voos.html"><button type="button" class="btn btn-primary btn-sm ml-4">Verificar Voos Cadastrados</button></a>
+        <a href="cadas_func.html"><button type="button" class="btn btn-primary btn-sm" id="cadas_func">Cadastrar Funcionário</button></a>
+        <a href="cadas_pass.html"><button type="button" id="cadas_pass"
+class="btn btn-primary btn-sm ml-4">Cadastrar Passagem</button></a>
+        <a href="checkin.html"><button type="button" class="btn btn-primary btn-sm ml-4" id="checkin">Abrir Balcão de Check-in</button></a>
+        <a href="voos.html"><button type="button" class="btn btn-primary btn-sm ml-4" id="voos">Verificar Voos Cadastrados</button></a>
       </div>
       <br><br><br>
       <div class="mt-4">
         <h5 class="text-center mb-4">Informações do Funcionário</h5>
         <div class="form-row d.flex justify-content-center mt-3">
           <div class="col-md-3">
-            <label for="nomefantasia">Nome</label>
-            <input type="text" class="form-control" id="nomefantasia" name="nomefantasia" value="" readonly>
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" value="" readonly>
           </div>
           <div class="col-md-3">
-            <label for="cnpj">CPF</label>
-            <input type="text" class="form-control" id="cnpj" name="cnpj" value="" readonly>
+            <label for="cpf">CPF</label>
+            <input type="text" class="form-control" id="cpf" name="cpf" value="" readonly>
           </div>
           <div class="col-md-3">
-            <label for="emailcontato">Email</label>
-            <input type="email" class="form-control" id="emailcontato" name="emailcontato" value="" readonly>
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" value="" readonly>
           </div>
           <div class="col-md-3">
-            <label for="emailcontato">Cargo</label>
-            <input type="email" class="form-control" id="emailcontato" name="emailcontato" value="" readonly>
+            <label for="cargo">Cargo</label>
+            <input type="email" class="form-control" id="cargo" name="cargo" value="" readonly>
           </div>             
         </div>
       </div            
     </div>
   </div>
-  
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/funcionarios.js"></script>
+  <script src="js/onchange.js"></script>
 </body>
 
 </html>

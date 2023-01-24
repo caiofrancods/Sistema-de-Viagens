@@ -11,7 +11,7 @@
   <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body onload="verif_login(); iniciar()">
   <div class="cont">
     <div class="cabecalho">
       <div>
@@ -23,69 +23,67 @@
       <form>
         <div class="form-group row">
           <div class="input-field col s12">
-            <label for="">Cidade de Origem</label><br>
-            <input type="text" id="autocomplete-input" class="autocomplete">              
+            <label for="origem">Cidade de Origem</label><br>
+            <input type="text" id="origem" name="origem" class="autocomplete">              
           </div>
           <div class="input-field col s12">
-            <label for="">Cidade de Destino</label><br>
-            <input type="text" id="autocomplete-input" class="autocomplete">              
+            <label for="destino">Cidade de Destino</label><br>
+            <input type="text" id="destino" name="destino" class="autocomplete">              
           </div>
           <div class="input-field col s12">
-            <label class="" for="">Data</label>
-            <input type="date" class="form-control mt-4" id="autocomplete-input" name="" value="" required>
+            <label class="" for="data">Data</label>
+            <input type="date" class="form-control mt-4" id="data" name="data" value="" required>
           </div>
           <div class="input-field col s12">
-            <label class="" for="">Hora</label>
-            <input type="time" class="form-control mt-4" id="autocomplete-input" name="" value="" required>
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="input-field col s12">
-            <label for="">Assentos Bunisses</label><br>
-            <input type="text" id="autocomplete-input" class="autocomplete">         
-          </div>
-          <div class="input-field col s12">
-            <label for="">Assentos Economy Premium</label><br>
-            <input type="text" id="autocomplete-input" class="autocomplete">    
-          </div>
-          <div class="input-field col s12">
-            <label for="">Assentos Economy</label><br>
-            <input type="text" id="autocomplete-input" class="autocomplete">              
-          </div>
-          <div class="input-field col s12">
-            <label class="" for="">Valor Passagem Economy</label>
-            <input type="number" class="form-control mt-4" id="autocomplete-input" name="" value="" required>
+            <label class="" for="hora">Hora</label>
+            <input type="time" class="form-control mt-4" id="hora" name="" value="" required>
           </div>
         </div>
         <div class="form-group row">
           <div class="input-field col s12">
-            <label for="">Modelo do Avião</label><br>
-            <input type="text" id="autocomplete-input" class="autocomplete">         
+            <label for="bunisses">Assentos Bunisses</label><br>
+            <input type="number" id="bunisses" name="bunisses" class="autocomplete">         
           </div>
           <div class="input-field col s12">
-            <label for="">Nome Piloto</label><br>
-            <input type="text" id="autocomplete-input" class="autocomplete">    
+            <label for="eco_premium">Assentos Economy Premium</label><br>
+            <input type="number" id="eco_premium" name="eco_premium" class="autocomplete">    
           </div>
           <div class="input-field col s12">
-            <label for="">Nome Co-Piloto</label><br>
-            <input type="text" id="autocomplete-input" class="autocomplete">              
+            <label for="economy">Assentos Economy</label><br>
+            <input type="number" id="economy" name="economy" class="autocomplete">              
           </div>
           <div class="input-field col s12">
-            <label class="" for="">Código da Equipe de Comissários</label>
-            <input type="number" class="form-control mt-4" id="autocomplete-input" name="" value="" required>
+            <label class="" for="valor_passagem">Valor Passagem Economy</label>
+            <input type="number" class="form-control mt-4" id="valor_passagem" name="valor_passagem" value="" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="input-field col s12">
+            <label for="modelo_aviao">Modelo do Avião</label><br>
+            <input type="text" id="modelo_aviao" name="modelo_aviao" class="autocomplete">         
+          </div>
+          <div class="input-field col s12">
+            <label for="piloto">Nome Piloto</label><br>
+            <input type="text" id="piloto" name="piloto" class="autocomplete">    
+          </div>
+          <div class="input-field col s12">
+            <label for="copiloto">Nome Co-Piloto</label><br>
+            <input type="text" id="copiloto" name="copiloto" class="autocomplete">              
+          </div>
+          <div class="input-field col s12">
+            <label class="" for="comissarios">Código da Equipe de Comissários</label>
+            <input type="number" class="form-control mt-4" id="comissarios" name="comissarios" value="" required>
           </div>
         </div>
         <div class="row d-flex">
-          <button type="button" class="btn btn-primary btn-sm btn-danger">Cancelar</button>
-          <button type="button" class="btn btn-primary btn-sm ml-4">Cadastrar</button>
+          <a href="admin.html"><button type="button" class="btn btn-primary btn-sm btn-danger">Cancelar</button></a>
+          <button type="button" class="btn btn-primary btn-sm ml-4" onclick="cadastrar_passagem()">Cadastrar</button>
         </div> 
       </form>        
     </div>
   </div>
-  
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/passagens.js"></script>
 </body>
 
 </html>

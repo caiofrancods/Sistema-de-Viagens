@@ -50,3 +50,4 @@ function alterarbusca(){
   var mostrar_pesquisa = document.getElementById('mostrar_pesquisa').style.display = 'none';
   var popup_pesquisar = document.getElementById('popup_pesquisar').style.display = 'block';
 }
+

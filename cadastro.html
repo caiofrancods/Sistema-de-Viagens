@@ -11,7 +11,7 @@
   <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body onload="iniciar()">
   <div class="cont">
     <div class="cabecalho">
       <div>
@@ -23,31 +23,30 @@
       <form id="formularioCadastro">
         <div class="form-row">
           <div class="col-md-3">
-            <label for="nomefantasia">Nome</label>
-            <input type="text" class="form-control" id="nomefantasia" name="nomefantasia" value="" required>
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" value="" required>
           </div>
           <div class="col-md-3">
-            <label for="cnpj">CPF</label>
-            <input type="text" class="form-control" id="cnpj" name="cnpj" value="" required>
+            <label for="cpf">CPF</label>
+            <input type="text" class="form-control" id="cpf" name="cpf" value="" required>
           </div>
           <div class="col-md-3">
-            <label for="emailcontato">Email de Contato</label>
-            <input type="email" class="form-control" id="emailcontato" name="emailcontato" value="" required>
+            <label for="email">Email de Contato</label>
+            <input type="email" class="form-control" id="email" name="email" value="" required>
           </div>
           <div class="col-md-3">
-            <label for="senhacadastro">Senha</label>
-            <input type="password" class="form-control" id="senhacadastro" name="senhacadastro" value="" required>
+            <label for="senha">Senha</label>
+            <input type="password" class="form-control" id="senha" name="senha" value="" required>
           </div>
         </div>
         <div class="row d.flex justify-content-end">
-          <button class="btn btn-primary mt-2 mb-4" type="button" onclick="cadastro()">Cadastrar</button>
+          <button class="btn btn-primary mt-2 mb-4" type="button" onclick="criar_conta()">Cadastrar</button>
         </div>
       </form>
     </div>
   </div>  
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/clientes.js"></script>
 </body>
 
 </html>

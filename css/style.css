@@ -54,3 +54,19 @@ a{
 .idade{
   display: none;
 }
+.question {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0
+}
+
+.question input,
+.question .answer { display: none }
+
+.question label {
+  display: inline-block;
+  margin-bottom: 5px;
+  width: 100%
+}
+.question input:checked ~ .answer {
+  display: block
+}
