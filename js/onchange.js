@@ -46,8 +46,9 @@ function apenasida(){
 }
 
 function alterarbusca(){
-  console.log('Teste');
-  var mostrar_pesquisa = document.getElementById('mostrar_pesquisa').style.display = 'none';
-  var popup_pesquisar = document.getElementById('popup_pesquisar').style.display = 'block';
+  var mostrar_pesquisa = document.getElementById('mostrar_pesquisa');
+  var popup_pesquisar = document.getElementById('popup_pesquisar');
+  mostrar_pesquisa.setAttribute('class', 'd-none');
+  popup_pesquisar.setAttribute('class', 'd-block');
 }
 

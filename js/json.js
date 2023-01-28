@@ -12,6 +12,10 @@ if (!localStorage.clientes) {
   var clientes = [];
   localStorage.setItem('clientes', JSON.stringify(clientes));
 }
+if (!localStorage.pesquisa) {
+  var pesquisa = "";
+  localStorage.setItem('pesquisa', JSON.stringify(pesquisa));
+}
 if (!localStorage.funcionarios) {
   var funcionarios = [];
  var func = new Object();

@@ -11,7 +11,7 @@
   <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body onload="mostrar_pesquisa()">
   <div class="cont">
     <div class="cabecalho">
       <div>
@@ -22,32 +22,32 @@
     </div>
     <div class="corpo">
       <!--Parte pesquisa--> 
-      <div class="form-group row d-flex justify-content-center align-items-end" id="mostrar_pesquisa">
+      <div class="form-group row d-flex justify-content-center align-items-end d-block" id="mostrar_pesquisa">
         <div class="ml-3">
-          <label for="regime">Viagem</label>
-          <input type="text" id="autocomplete-input" class="autocomplete" readonly>
+          <label for="viagem">Viagem</label>
+          <input type="text" id="viagem" class="autocomplete" readonly>
         </div>
         <div class="ml-3">
-          <label for="regime">Assento</label>
-          <input type="text" id="autocomplete-input" class="autocomplete" readonly>
+          <label for="assento">Assento</label>
+          <input type="text" id="assento" class="autocomplete" readonly>
         </div>
         <div class="ml-3">
-          <label for="regime">Passageiros</label>
-          <input type="text" id="autocomplete-input" class="autocomplete" readonly>
+          <label for="passageiros">Passageiros</label>
+          <input type="text" id="passageiros" class="autocomplete" readonly>
         </div>
         <div class="ml-3">
-          <label for="regime">Datas</label>
-          <input type="text" id="autocomplete-input" class="autocomplete" readonly>
+          <label for="datas">Datas</label>
+          <input type="text" id="datas" class="autocomplete" readonly>
         </div>
         <div class="ml-3">
-          <label for="regime">Cidades</label>
-          <input type="text" id="autocomplete-input" class="autocomplete" readonly>
+          <label for="cidades">Cidades</label>
+          <input type="text" id="cidades" class="autocomplete" readonly>
         </div>
         <div class="row d-flex justify-content-end ml-4">
           <button type="button" class="btn btn-primary btn-sm" onclick="alterarbusca()">Alterar Busca</button>
         </div> 
       </div>
-      <form id="popup_pesquisar" class="d-none">
+      <div id="popup_pesquisar" class="d-none">
         <div class="form-group row">
           <div class="ml-3">
             <label for="regime">Viagem</label>
@@ -115,19 +115,19 @@
         <div class="row d-flex justify-content-end">
           <button type="button" class="btn btn-primary btn-sm">Pesquisar</button>
         </div>          
-      </form>      
+      </div>      
       <!--Parte conteúdo--> 
       <div class="row mt-4">
         <input type="checkbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon ml-4"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"/></svg></button>
         <p class="ml-3">Filtros</p>
       </div>
+      <div id="passagens">
+        
+      </div>
     </div>
   </div>
-  <script src="onchange.js"></script>
-  <script src="https://kit.fontawesome.com/5221b61de9.js" crossorigin="anonymous"></script>  
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="js/passagens.js"></script>
+  <script src="js/onchange.js"></script>
 </body>
 
 </html>

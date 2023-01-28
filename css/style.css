@@ -70,3 +70,10 @@ a{
 .question input:checked ~ .answer {
   display: block
 }
+.answer{
+  font-size: 14px;
+}
+.question label{
+  color: black;
+  font-size: 15px;
+}

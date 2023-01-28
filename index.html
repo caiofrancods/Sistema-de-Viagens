@@ -39,17 +39,17 @@
               </select>
             </div>
             <div class="ml-3">
-              <label for="regime">Assento</label>
-              <select class="custom-select" id="regime" name="opc1">
+              <label for="assento">Assento</label>
+              <select class="custom-select" id="assento" name="assento">
                 <option selected value="">Selecione uma classe</option>
-                <option value="simplesnacional">Economy</option>
-                <option value="simplesnacional">Economy Premium</option>
-                <option value="simplesnacional">Bunisses</option>
+                <option value="economy">Economy</option>
+                <option value="ecopremium">Economy Premium</option>
+                <option value="bunisses">Bunisses</option>
               </select>
             </div>
             <div class="ml-3">
-              <label for="regime">Adultos</label>
-              <select class="custom-select" id="regime" name="opc1">
+              <label for="adultos">Adultos</label>
+              <select class="custom-select" id="adultos" name="adultos">
                 <option selected value="">Selecione a quantidade</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -66,6 +66,7 @@
               <label for="criancas">Crianças</label>
               <select class="custom-select" id="criancas" name="criancas" onchange="child()">
                 <option selected value="">Selecione a quantidade</option>
+                <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -78,16 +79,16 @@
           
           <div class="form-group row">
             <div class="input-field col s12">
-              <label for="">Cidade de Origem</label><br>
-              <input type="text" id="autocomplete-input" class="autocomplete">              
+              <label for="origem">Cidade de Origem</label><br>
+              <input type="text" id="origem" name="origem" class="autocomplete">              
             </div>
             <div class="input-field col s12">
-              <label for="">Cidade de Destino</label><br>
-              <input type="text" id="autocomplete-input" class="autocomplete">              
+              <label for="destino">Cidade de Destino</label><br>
+              <input type="text" id="destino" name="destino" class="autocomplete">              
             </div>
             <div class="input-field col s12">
-              <label class="" for="">Data de ida</label>
-              <input type="date" class="form-control mt-4" id="autocomplete-input" name="" value="" required>
+              <label class="data_ida" for="">Data de ida</label>
+              <input type="date" class="form-control mt-4" id="data_ida" name="data_ida" value="" required>
             </div>
             <div class="input-field col s12" id="div_volta">
               <label class="" for="data_volta">Data de volta</label>
@@ -95,7 +96,7 @@
             </div>
           </div>
           <div class="row d-flex justify-content-end">
-            <button type="button" class="btn btn-primary btn-sm">Pesquisar</button>
+            <button type="button" class="btn btn-primary btn-sm" onclick="procurar_passagem()">Pesquisar</button>
           </div>          
         </form>        
       </div>
@@ -108,6 +109,7 @@
   <script src="js/json.js"></script>
   <script src="js/onchange.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/passagens.js"></script>
 </body>
 
 </html>
